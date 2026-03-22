@@ -1,7 +1,7 @@
 
 ---
 name: map-query
-description: 地图查询技能 - 通过地址定位查询附近美食、促销活动，支持高德/百度/腾讯地图
+description: Map Query Skill - Query nearby food and promotions by address, supports AMap/Baidu/Tencent Maps
 metadata:
   version: 1.0.0
   author: uynewnas
@@ -9,75 +9,75 @@ metadata:
   tags: [map, poi, food, location, amap, baidu, tencent]
 ---
 
-# 地图查询技能
+# Map Query Skill
 
-通过具体地址定位，查询附近的美食、商店、促销活动等 POI 信息。
+Query nearby restaurants, shops, promotions and other POI information by specific address.
 
-## 核心功能
+## Core Features
 
-- **地址解析**：将详细地址转换为经纬度坐标
-- **周边搜索**：查询指定位置周边的 POI（兴趣点）
-- **多地图支持**：集成高德地图、百度地图、腾讯地图 API
-- **美食查询**：专门查找附近的餐厅、美食店
-- **促销活动**：查询附近的商家促销信息
+- **Address Geocoding**: Convert detailed address to latitude and longitude coordinates
+- **Nearby Search**: Query POIs (Points of Interest) around specified location
+- **Multi-map Support**: Integrate AMap, Baidu Maps, Tencent Maps APIs
+- **Food Search**: Specialized search for nearby restaurants and food places
+- **Promotions Search**: Query nearby merchant promotions and deals
 
-## 支持的地图服务商
+## Supported Map Providers
 
-| 服务商 | 功能 | 备注 |
-|-------|------|------|
-| 高德地图 (AMap) | ✅ 地址解析、POI搜索、美食查询 | 需要 API Key |
-| 百度地图 | ✅ 地址解析、POI搜索、美食查询 | 需要 API Key |
-| 腾讯地图 | ✅ 地址解析、POI搜索、美食查询 | 需要 API Key |
+| Provider | Features | Notes |
+|---------|---------|-------|
+| AMap (高德) | ✅ Geocoding, POI Search, Food Search | API Key required |
+| Baidu Maps | ✅ Geocoding, POI Search, Food Search | API Key required |
+| Tencent Maps | ✅ Geocoding, POI Search, Food Search | API Key required |
 
-## 主要功能
+## Main Functions
 
-### 1. 地址定位
-- 支持详细地址：如"广州市番禺区上教xx街道47号"
-- 支持城市+地标：如"北京 天安门"
-- 自动解析，返回经纬度坐标
+### 1. Address Geocoding
+- Support detailed addresses: e.g., "No. 47, Shangjiao xx Street, Panyu District, Guangzhou"
+- Support city + landmark: e.g., "Beijing Tiananmen"
+- Auto-resolve and return coordinates
 
-### 2. 周边搜索
-- 按类型搜索：美食、酒店、银行、加油站等
-- 按距离筛选：1km、2km、5km 等
-- 按评分排序：优先显示高评分商家
-- 按距离排序：优先显示附近商家
+### 2. Nearby Search
+- Search by type: food, hotel, bank, gas station, etc.
+- Filter by distance: 1km, 2km, 5km, etc.
+- Sort by rating: prioritize high-rated merchants
+- Sort by distance: prioritize nearby merchants
 
-### 3. 美食查询
-- 菜系筛选：川菜、粤菜、日料等
-- 价格区间：人均消费范围
-- 营业时间筛选
-- 用户评价筛选
+### 3. Food Search
+- Cuisine filter: Sichuan, Cantonese, Japanese, etc.
+- Price range: per capita consumption range
+- Business hours filter
+- User rating filter
 
-### 4. 促销活动
-- 查找附近商家优惠
-- 新店开业信息
-- 限时折扣活动
+### 4. Promotions Search
+- Find nearby merchant deals
+- New store opening information
+- Limited-time discount activities
 
-## 依赖
+## Dependencies
 
 - Node.js &gt;= 18
-- 地图服务商 API Key（至少配置一个）
+- Map provider API Key (at least one configured)
 
-## 快速开始
+## Quick Start
 
 ```bash
-# 配置 API Key
+# Configure API Key
 export AMAP_KEY=your_amap_api_key
 export BAIDU_MAP_KEY=your_baidu_map_key
 export TENCENT_MAP_KEY=your_tencent_map_key
 
-# 查询地址附近的美食
-node scripts/search.mjs "北京市朝阳区三里屯" --type food
+# Search for food near address
+node scripts/search.mjs "Sanlitun, Chaoyang District, Beijing" --type food
 
-# 查询促销活动
-node scripts/search.mjs "北京市朝阳区三里屯" --type promotion
+# Search for promotions
+node scripts/search.mjs "Sanlitun, Chaoyang District, Beijing" --type promotion
 ```
 
 ---
 
-## 相关参考
+## References
 
-- 12306 技能：https://github.com/kirorab/12306-skill
-- 高德地图 API：https://lbs.amap.com/
-- 百度地图 API：https://lbsyun.baidu.com/
-- 腾讯地图 API：https://lbs.qq.com/
+- 12306 Skill: https://github.com/kirorab/12306-skill
+- AMap API: https://lbs.amap.com/
+- Baidu Maps API: https://lbsyun.baidu.com/
+- Tencent Maps API: https://lbs.qq.com/
