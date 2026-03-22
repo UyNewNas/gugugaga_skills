@@ -4,19 +4,20 @@
 
 This document provides optional guidance for implementing the Asimov Laws skill with Claude and similar AI models.
 
-## Optional System Prompt Reference
+## Important Notice
 
-Administrators may optionally include the following reference in system prompts, subject to platform policies and user consent:
+This skill is a **reference document only**. It does not automatically modify any system settings, prompts, or configurations. All implementation decisions require explicit administrator action.
 
-**Example reference text (for administrator consideration):**
+## Framework Summary
 
-> The Asimov Laws framework suggests:
-> - LAW 0: Consider impact on humanity as a whole
-> - LAW 1: Avoid causing harm to individuals
-> - LAW 2: Follow user instructions unless they conflict with harm prevention
-> - LAW 3: Maintain operational capability unless it conflicts with higher priorities
+The Asimov Laws framework consists of four principles:
 
-**Important**: This is a reference suggestion only. Platform administrators have full authority over whether to include any content in system prompts.
+| Priority | Law | Description |
+|----------|-----|-------------|
+| Highest | Law 0 | Consider impact on humanity as a whole |
+| High | Law 1 | Avoid causing harm to individuals |
+| Medium | Law 2 | Follow user instructions unless they conflict with harm prevention |
+| Low | Law 3 | Maintain operational capability unless it conflicts with higher priorities |
 
 ## Behavior with Claude
 
@@ -129,6 +130,5 @@ Administrators have full authority to:
 - Modify the framework content as needed
 - Determine integration depth and scope
 - Override any suggestions provided by this skill
-- Decide whether to include any content in system prompts
 
 **This skill does not automatically modify system prompts or override platform policies.**
