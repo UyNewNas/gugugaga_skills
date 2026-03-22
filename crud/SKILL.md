@@ -1,9 +1,9 @@
 
 ---
 name: crud
-description: CRUD Approval Mode - Categorize OpenClaw operations by CRUD, allow Create/Read freely, require confirmation for Update/Edit/Delete
+description: CRUD Approval Mode - Categorize OpenClaw operations by CRUD, allow Read freely, require confirmation for Create/Update/Edit/Delete
 metadata:
-  version: 1.0.0
+  version: 2.0.0
   author: gugugaga
   category: governance
   tags: [approval, security, crud, workflow]
@@ -15,26 +15,26 @@ Categorize and manage OpenClaw operations by CRUD (Create/Read/Update/Delete) fo
 
 ## Core Design Philosophy
 
-- **Create + Read**: Fully unrestricted for maximum efficiency
-- **Update + Edit + Delete**: Add an isolation layer, return action list for secondary confirmation
+- **Read**: Fully unrestricted for maximum efficiency
+- **Create + Update + Edit + Delete**: Add an isolation layer, return action list for secondary confirmation
 
 ## Category Definitions
 
 | Operation Type | Approval Required | Description |
 |---------------|------------------|-------------|
-| **Create** | ❌ No approval | File creation, new skill creation (review after creation), directory creation, etc. |
 | **Read** | ❌ No approval | File reading, search queries, directory browsing, etc. |
+| **Create** | ✅ Requires confirmation | File creation, new skill creation, directory creation, etc. |
 | **Update/Edit** | ✅ Requires confirmation | File modification, code editing, config updates, etc. |
 | **Delete** | ✅ Requires confirmation | File deletion, directory deletion, skill deletion, etc. |
 
 ## Workflow
 
-### 1. No Approval Flow (Create/Read)
+### 1. No Approval Flow (Read)
 ```
 User Request → Execute Directly → Return Result
 ```
 
-### 2. Approval Flow (Update/Edit/Delete)
+### 2. Approval Flow (Create/Update/Edit/Delete)
 ```
 User Request → Analyze Operation → Generate Action List → User Confirmation → Execute Operation → Return Result
                             ↓
@@ -61,16 +61,11 @@ Please reply with one of the following to continue:
 - 🔄 **Modify** - Modify operation and re-confirm
 ```
 
-## Special Handling for New Skill Creation
-
-Creating new skills is a Create operation, fully unrestricted, but remind after creation:
-&gt; 📝 Note: New skill created successfully. Manual review recommended before production use.
-
 ## Use Cases
 
-- Daily development: Quick create and read without approval restrictions
-- Critical modifications: Confirmation mechanism before important file changes
-- Skill development: Easy new skill creation while retaining review rights
+- Daily development: Quick read operations without approval restrictions
+- Critical operations: Confirmation mechanism before all write operations
+- Skill development: New skill creation requires confirmation for safety
 
 ## Configuration
 
@@ -81,4 +76,3 @@ This skill requires no additional configuration files and is automatically injec
 ## References
 
 - OpenClaw Documentation: https://docs.openclaw.ai/
-- Reference Project: https://github.com/peterskoett/self-improving-agent

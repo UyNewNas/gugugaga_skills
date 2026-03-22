@@ -39,12 +39,6 @@ clawdhub install crud
 
 This skill doesn't require additional configuration files and will be automatically injected into sessions via `CLAUDE.md`.
 
-### Optional: Custom Behavior
-
-If you need to adjust approval thresholds, you can directly tell the AI during conversation:
-- "This file modification is simple, just do it directly"
-- "No need to confirm next time when modifying files in this directory"
-
 ---
 
 ## Uninstall

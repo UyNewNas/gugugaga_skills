@@ -6,15 +6,15 @@ Classify OpenClaw operations by CRUD (Create/Read/Update/Delete) for granular co
 ## 🎯 Design Philosophy
 
 **Pain Points Solved:**
-- **Efficiency First**: Create and Read operations are unrestricted, no bottlenecks
-- **Safety Net**: Update, Edit, and Delete operations require secondary confirmation
+- **Efficiency First**: Read operations are unrestricted, no bottlenecks
+- **Safety Net**: Create, Update, Edit, and Delete operations require secondary confirmation
 
 ## 📋 Classification Rules
 
 | Operation Type | Approval Required | Description |
 |---------------|-------------------|-------------|
-| **Create** | ❌ No Approval | File creation, new skill creation, etc. |
 | **Read** | ❌ No Approval | File reading, search queries, etc. |
+| **Create** | ✅ Requires Confirmation | File creation, new skill creation, etc. |
 | **Update/Edit** | ✅ Requires Confirmation | File modification, code editing, etc. |
 | **Delete** | ✅ Requires Confirmation | File deletion, directory removal, etc. |
 
@@ -47,12 +47,12 @@ crud/
 
 ## 🔄 Workflow
 
-### No Approval Needed (Create/Read)
+### No Approval Needed (Read)
 ```
 User Request → Execute Directly → Return Result
 ```
 
-### Approval Required (Update/Edit/Delete)
+### Approval Required (Create/Update/Edit/Delete)
 ```
 User Request → Analyze Operation → Generate Action List → User Confirmation → Execute Operation → Return Result
 ```
@@ -82,11 +82,6 @@ User Request → Analyze Operation → Generate Action List → User Confirmatio
 - ❌ **Cancel** - Abandon this operation
 - 🔄 **Modify Request** - Adjust operation and re-confirm
 ```
-
-## 🦞 New Skill Creation
-
-Creating a new skill is a Create operation and doesn't require approval, but you will be reminded after creation:
-&gt; 📝 Note: New skill has been created. It is recommended to perform manual review before putting into production use.
 
 ## 📚 Related Links
 

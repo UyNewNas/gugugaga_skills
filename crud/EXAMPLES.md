@@ -10,14 +10,34 @@ Directly call Read tool to read file, no confirmation needed
 
 ---
 
-## Scenario 2: Create New File (No Approval Needed)
+## Scenario 2: Create New File (Confirmation Required)
 
 **User:** Create a new utils.py file
 
 **Your Response:**
-Create file directly, then remind:
 ```
-✅ File utils.py has been created successfully!
+⚠️ **Operation Confirmation Request**
+
+**Operation Type:** Create
+**Timestamp:** 2026-03-23 10:30:00
+
+---
+
+**📄 Affected Files List:**
+1. `utils.py` - Create new file
+
+---
+
+**📝 Operation Details:**
+- Create new utils.py file
+- Estimated 1 new file creation
+
+---
+
+**Please choose:**
+- ✅ **Confirm Execution** - Continue with the above operations
+- ❌ **Cancel** - Abandon this operation
+- 🔄 **Modify Request** - Adjust operation and re-confirm
 ```
 
 ---
@@ -86,17 +106,35 @@ Create file directly, then remind:
 
 ---
 
-## Scenario 5: Create New Skill (No Approval Needed, But Remind for Review)
+## Scenario 5: Create New Skill (Confirmation Required)
 
 **User:** Create a new skill called logging
 
 **Your Response:**
-After creating the skill, add a reminder:
 ```
-✅ New skill logging has been created successfully!
+⚠️ **Operation Confirmation Request**
 
-📝 Review Note:
-- Please check if skill functionality meets expectations
-- Verify security risks and permission settings
-- Confirm before putting into production use
+**Operation Type:** Create
+**Timestamp:** 2026-03-23 10:40:00
+
+---
+
+**📄 Affected Files List:**
+1. `logging/SKILL.md` - Skill definition file
+2. `logging/CLAUDE.md` - Core instruction file
+3. `logging/README.md` - Documentation file
+
+---
+
+**📝 Operation Details:**
+- Create new logging skill directory
+- Create SKILL.md, CLAUDE.md, README.md, etc. files
+- Estimated 1 new directory and 3 new files
+
+---
+
+**Please choose:**
+- ✅ **Confirm Execution** - Continue with the above operations
+- ❌ **Cancel** - Abandon this operation
+- 🔄 **Modify Request** - Adjust operation and re-confirm
 ```
