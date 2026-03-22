@@ -4,7 +4,7 @@ name: devil-advocate
 description: Devil's Advocate - Self-refute before responding, improve output quality through pro and con debate
 metadata:
   version: 1.0.0
-  author: gugugaga
+  author: Slava Chan @UyNewNas
   category: cognitive-enhancement
   tags: [critical-thinking, self-reflection, quality-improvement, debate]
 ---

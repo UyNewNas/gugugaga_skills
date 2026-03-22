@@ -4,9 +4,21 @@ name: map-query
 description: 地图查询技能 - 通过地址定位查询附近美食、促销活动，支持高德/百度/腾讯地图
 metadata:
   version: 1.0.0
-  author: uynewnas
+  author: Slava Chan @UyNewNas
   category: location-services
   tags: [map, poi, food, location, amap, baidu, tencent]
+  env:
+    required:
+      - name: AMAP_KEY
+        description: 高德地图 API Key
+        required: false
+      - name: BAIDU_MAP_KEY
+        description: 百度地图 API Key
+        required: false
+      - name: TENCENT_MAP_KEY
+        description: 腾讯地图 API Key
+        required: false
+    note: 至少需要配置一个地图服务商的 API Key
 ---
 
 # 地图查询技能

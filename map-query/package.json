@@ -2,14 +2,13 @@
 {
   "name": "map-query-skill",
   "version": "1.0.0",
-  "description": "地图查询技能 - 查询附近美食和促销活动",
+  "description": "Map Query Skill - Query nearby food and promotions by address",
   "type": "module",
-  "main": "index.js",
   "scripts": {
     "geocode": "node scripts/geocode.mjs",
     "search": "node scripts/search.mjs",
     "food": "node scripts/food.mjs",
-    "promotion": "node/scripts/promotion.mjs"
+    "promotion": "node scripts/promotion.mjs"
   },
   "keywords": [
     "map",
@@ -19,9 +18,9 @@
     "baidu",
     "tencent"
   ],
-  "author": "gugugaga",
+  "author": "Slava Chan @UyNewNas",
   "license": "MIT",
   "engines": {
-    "node": "&gt;=18"
+    "node": ">=18"
   }
 }

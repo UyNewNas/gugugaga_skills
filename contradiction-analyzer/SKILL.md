@@ -4,7 +4,7 @@ name: contradiction-analyzer
 description: Contradiction Analyzer - Extract contradictions from multi-source information, identify primary and secondary contradictions, analyze information source bias, and generate structured contradiction analysis reports
 metadata:
   version: 1.0.0
-  author: gugugaga
+  author: Slava Chan @UyNewNas
   category: analysis
   tags: [contradiction, analysis, information-filter, bias-detection, critical-thinking]
 ---

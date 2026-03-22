@@ -4,7 +4,7 @@ name: crud
 description: CRUD Approval Mode - Categorize OpenClaw operations by CRUD, allow Read freely, require confirmation for Create/Update/Edit/Delete
 metadata:
   version: 2.0.0
-  author: gugugaga
+  author: Slava Chan @UyNewNas
   category: governance
   tags: [approval, security, crud, workflow]
 ---

@@ -4,7 +4,7 @@ name: dialectics
 description: Dialectics Skill - Handle complex and contradictory information through thesis-antithesis-synthesis dialectical thinking, propose integrated solutions that transcend opposites
 metadata:
   version: 1.0.0
-  author: gugugaga
+  author: Slava Chan @UyNewNas
   category: thinking
   tags: [dialectics, thinking, decision, philosophy, analysis]
 ---

@@ -4,9 +4,21 @@ name: map-query
 description: Map Query Skill - Query nearby food and promotions by address, supports AMap/Baidu/Tencent Maps
 metadata:
   version: 1.0.0
-  author: uynewnas
+  author: Slava Chan @UyNewNas
   category: location-services
   tags: [map, poi, food, location, amap, baidu, tencent]
+  env:
+    required:
+      - name: AMAP_KEY
+        description: AMap (高德地图) API Key
+        required: false
+      - name: BAIDU_MAP_KEY
+        description: Baidu Maps API Key
+        required: false
+      - name: TENCENT_MAP_KEY
+        description: Tencent Maps API Key
+        required: false
+    note: At least one map provider API key must be configured
 ---
 
 # Map Query Skill

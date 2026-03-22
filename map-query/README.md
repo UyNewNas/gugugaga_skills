@@ -104,8 +104,6 @@ map-query/
 
 ## 🛠️ Available Scripts
 
-(To be implemented)
-
 - `scripts/geocode.mjs` - Address geocoding
 - `scripts/search.mjs` - Nearby search
 - `scripts/food.mjs` - Food search

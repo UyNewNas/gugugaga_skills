@@ -3,7 +3,7 @@ name: crud
 description: CRUD分类审批模式 - 将OpenClaw的操作按CRUD分类管理，查询完全放开，创建更新编辑删除需要二次确认
 metadata:
   version: 2.0.0
-  author: gugugaga
+  author: Slava Chan @UyNewNas
   category: governance
   tags: [approval, security, crud, workflow]
 

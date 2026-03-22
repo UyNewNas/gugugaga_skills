@@ -3,7 +3,7 @@ name: dialectics
 description: 辩证法技能 - 通过正题-反题-合题的辩证思考，处理复杂矛盾信息，提出超越对立的综合性方案
 metadata:
   version: 1.0.0
-  author: gugugaga
+  author: Slava Chan @UyNewNas
   category: thinking
   tags: [dialectics, thinking, decision, philosophy, analysis]
 

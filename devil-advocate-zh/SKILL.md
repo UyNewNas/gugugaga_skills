@@ -4,7 +4,7 @@ name: devil-advocate
 description: 反驳型人格 - 在输出回复前进行自我反驳，通过正反方讨论提高输出质量
 metadata:
   version: 1.0.0
-  author: gugugaga
+  author: Slava Chan @UyNewNas
   category: cognitive-enhancement
   tags: [critical-thinking, self-reflection, quality-improvement, debate]
 ---
