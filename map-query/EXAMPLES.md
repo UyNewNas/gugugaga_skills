@@ -1,116 +1,116 @@
 
-# 地图查询技能 - 使用示例
+# Map Query Skill - Usage Examples
 
-## 示例 1：查询附近美食
+## Example 1: Search for Nearby Food
 
-### 用户输入
+### User Input
 ```
-帮我查查广州市番禺区上教xx街道47号附近有什么好吃的
+Help me find what's good to eat near No. 47, Shangjiao xx Street, Panyu District, Guangzhou
 ```
 
-### 期望输出
+### Expected Output
 ```
-📍 **地址定位成功**
-地址：广州市番禺区上教xx街道47号
-坐标：113.2644, 23.1291
+📍 **Address Geocoded Successfully**
+Address: No. 47, Shangjiao xx Street, Panyu District, Guangzhou
+Coordinates: 113.2644, 23.1291
 
-🍽️ **附近美食推荐（1km内，按评分排序）**
+🍽️ **Nearby Food Recommendations (within 1km, sorted by rating)**
 
-1. **粤香阁** - 粤菜
-   ⭐ 4.8分 | 📍 280米 | 💰 人均95元
-   📝 推荐：招牌烧鹅、白切鸡、清蒸鲈鱼
-   🕐 营业时间：11:00-22:00
+1. **Yue Xiang Ge** - Cantonese Cuisine
+   ⭐ 4.8 | 📍 280m | 💰 ¥95 per person
+   📝 Recommended: Signature Roast Goose, White Cut Chicken, Steamed Perch
+   🕐 Hours: 11:00-22:00
 
-2. **老上海馄饨铺** - 面食/小吃
-   ⭐ 4.5分 | 📍 150米 | 💰 人均25元
-   📝 推荐：鲜肉大馄饨、葱油拌面
-   🕐 营业时间：07:00-21:00
+2. **Old Shanghai Wonton Shop** - Noodles/Snacks
+   ⭐ 4.5 | 📍 150m | 💰 ¥25 per person
+   📝 Recommended: Fresh Pork Wontons, Scallion Oil Noodles
+   🕐 Hours: 07:00-21:00
 
-3. **重庆老火锅** - 火锅
-   ⭐ 4.6分 | 📍 520米 | 💰 人均130元
-   📝 推荐：牛油鸳鸯锅、鲜毛肚、鸭肠
-   🕐 营业时间：11:00-次日02:00
+3. **Chongqing Hot Pot** - Hot Pot
+   ⭐ 4.6 | 📍 520m | 💰 ¥130 per person
+   📝 Recommended: Butter Mandarin Duck Pot, Fresh Tripe, Duck Intestines
+   🕐 Hours: 11:00-02:00 next day
 
-4. **寿司屋** - 日料
-   ⭐ 4.3分 | 📍 750米 | 💰 人均180元
-   📝 推荐：三文鱼刺身、鳗鱼饭、寿司拼盘
-   🕐 营业时间：11:30-14:30, 17:30-22:00
+4. **Sushi House** - Japanese Cuisine
+   ⭐ 4.3 | 📍 750m | 💰 ¥180 per person
+   📝 Recommended: Salmon Sashimi, Eel Rice, Sushi Platter
+   🕐 Hours: 11:30-14:30, 17:30-22:00
 
 ---
-💡 提示：需要导航、查看更多详情或调整搜索条件请告诉我！
-```
-
----
-
-## 示例 2：查询促销活动
-
-### 用户输入
-```
-北京市朝阳区三里屯附近最近有什么促销活动吗？
-```
-
-### 期望输出
-```
-📍 **地址定位成功**
-地址：北京市朝阳区三里屯
-坐标：116.4512, 39.9328
-
-🎉 **近期促销活动**
-
-1. **太古里春季时尚周**
-   📍 三里屯太古里北区 | 🕐 2026-03-20 至 2026-04-10
-   📝 活动详情：全场春装5折起，满1000减200，会员额外9折
-   🏪 参与商户：Nike、Adidas、Zara、H&amp;M等
-
-2. **星巴克新店开业**
-   📍 三里屯SOHO B1层 | 🕐 2026-03-15 至 2026-03-31
-   📝 活动详情：所有饮品买一送一，购买任意糕点+1元得美式咖啡
-   🎁 到店即送限量版贴纸
-
-3. **盒马鲜生会员日**
-   📍 三里屯店 | 🕐 每周三
-   📝 活动详情：会员专享8.8折，生鲜商品买二送一，积分双倍抵现
-
-4. **优衣库限时特卖**
-   📍 三里屯太古里南区 | 🕐 2026-03-23 至 2026-03-29
-   📝 活动详情：精选商品59元起，满399减50
-
----
-💡 需要了解更多活动详情或查看具体商户位置请告诉我！
+💡 Tip: Need navigation, see more details, or adjust search conditions? Let me know!
 ```
 
 ---
 
-## 示例 3：按条件筛选美食
+## Example 2: Search for Promotions
 
-### 用户输入
+### User Input
 ```
-上海南京东路附近，帮我找人均50-100元的川菜，评分4分以上的
+Are there any promotions near Sanlitun, Chaoyang District, Beijing recently?
 ```
 
-### 期望输出
+### Expected Output
 ```
-📍 **地址定位成功**
-地址：上海南京东路
-坐标：121.4879, 31.2387
+📍 **Address Geocoded Successfully**
+Address: Sanlitun, Chaoyang District, Beijing
+Coordinates: 116.4512, 39.9328
 
-🌶️ **川菜推荐（人均50-100元，评分≥4.0）**
+🎉 **Recent Promotions**
 
-1. **川味馆**
-   ⭐ 4.5分 | 📍 320米 | 💰 人均75元
-   📝 推荐：水煮牛肉、麻婆豆腐、回锅肉
-   🕐 营业时间：10:30-22:00
+1. **Taikoo Li Spring Fashion Week**
+   📍 Taikoo Li Sanlitun North | 🕐 March 20, 2026 - April 10, 2026
+   📝 Details: Spring clothing 50% off, spend 1000 get 200 off, members get extra 10% off
+   🏪 Participating merchants: Nike, Adidas, Zara, H&amp;M, etc.
 
-2. **麻辣诱惑**
-   ⭐ 4.3分 | 📍 580米 | 💰 人均88元
-   📝 推荐：毛血旺、酸菜鱼、干锅花菜
-   🕐 营业时间：11:00-23:00
+2. **Starbucks New Store Opening**
+   📍 Sanlitun SOHO B1 | 🕐 March 15, 2026 - March 31, 2026
+   📝 Details: Buy one get one free on all drinks, +¥1 for Americano with any pastry purchase
+   🎁 Free limited edition stickers with any purchase
 
-3. **川妹子餐厅**
-   ⭐ 4.2分 | 📍 850米 | 💰 人均65元
-   📝 推荐：口水鸡、担担面、夫妻肺片
-   🕐 营业时间：10:00-21:30
+3. **Freshippo Member Day**
+   📍 Sanlitun Store | 🕐 Every Wednesday
+   📝 Details: Members enjoy 12% off, fresh produce buy two get one free, double points for cash
+
+4. **Uniqlo Limited Time Sale**
+   📍 Taikoo Li Sanlitun South | 🕐 March 23, 2026 - March 29, 2026
+   📝 Details: Selected items from ¥59, spend 399 get 50 off
 
 ---
-💡 需要调整筛选条件或查看更多餐厅请告诉我！
+💡 Need more details or specific merchant locations? Let me know!
+```
+
+---
+
+## Example 3: Filter Food by Conditions
+
+### User Input
+```
+Near Nanjing East Road, Shanghai, help me find Sichuan cuisine with ¥50-100 per person, 4.0+ rating
+```
+
+### Expected Output
+```
+📍 **Address Geocoded Successfully**
+Address: Nanjing East Road, Shanghai
+Coordinates: 121.4879, 31.2387
+
+🌶️ **Sichuan Cuisine Recommendations (¥50-100 per person, rating ≥4.0)**
+
+1. **Chuan Wei Guan**
+   ⭐ 4.5 | 📍 320m | 💰 ¥75 per person
+   📝 Recommended: Boiled Beef, Mapo Tofu, Twice Cooked Pork
+   🕐 Hours: 10:30-22:00
+
+2. **Spicy Attraction**
+   ⭐ 4.3 | 📍 580m | 💰 ¥88 per person
+   📝 Recommended: Maoxuewang, Sauerkraut Fish, Dry Pot Cauliflower
+   🕐 Hours: 11:00-23:00
+
+3. **Chuan Mei Zi Restaurant**
+   ⭐ 4.2 | 📍 850m | 💰 ¥65 per person
+   📝 Recommended: Saliva Chicken, Dandan Noodles, Sliced Beef and Ox Tongue in Chili Sauce
+   🕐 Hours: 10:00-21:30
+
+---
+💡 Need to adjust filter conditions or see more restaurants? Let me know!
 ```

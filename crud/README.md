@@ -1,21 +1,22 @@
 
 # 🦞 CRUD Approval Mode - OpenClaw Skill
 
-Categorize and manage OpenClaw operations by CRUD (Create/Read/Update/Delete) for both efficiency and security.
+Classify OpenClaw operations by CRUD (Create/Read/Update/Delete) for granular control, balancing efficiency and security.
 
 ## 🎯 Design Philosophy
 
-- **Efficiency First**: Create and Read are fully unrestricted, no blocked workflow
-- **Safety Net**: Update, Edit, and Delete require secondary confirmation
+**Pain Points Solved:**
+- **Efficiency First**: Create and Read operations are unrestricted, no bottlenecks
+- **Safety Net**: Update, Edit, and Delete operations require secondary confirmation
 
 ## 📋 Classification Rules
 
 | Operation Type | Approval Required | Description |
-|---------------|------------------|-------------|
-| **Create** | ❌ No approval | File creation, new skill creation, etc. |
-| **Read** | ❌ No approval | File reading, search queries, etc. |
-| **Update/Edit** | ✅ Requires confirmation | File modification, code editing, etc. |
-| **Delete** | ✅ Requires confirmation | File deletion, directory deletion, etc. |
+|---------------|-------------------|-------------|
+| **Create** | ❌ No Approval | File creation, new skill creation, etc. |
+| **Read** | ❌ No Approval | File reading, search queries, etc. |
+| **Update/Edit** | ✅ Requires Confirmation | File modification, code editing, etc. |
+| **Delete** | ✅ Requires Confirmation | File deletion, directory removal, etc. |
 
 ## 🚀 Quick Start
 
@@ -46,12 +47,12 @@ crud/
 
 ## 🔄 Workflow
 
-### No Approval (Create/Read)
+### No Approval Needed (Create/Read)
 ```
 User Request → Execute Directly → Return Result
 ```
 
-### Requires Approval (Update/Edit/Delete)
+### Approval Required (Update/Edit/Delete)
 ```
 User Request → Analyze Operation → Generate Action List → User Confirmation → Execute Operation → Return Result
 ```
@@ -66,30 +67,30 @@ User Request → Analyze Operation → Generate Action List → User Confirmatio
 
 ---
 
-**📄 Affected Files:**
+**📄 Affected Files List:**
 1. `main.py` - Modify port configuration
 
 ---
 
 **📝 Operation Details:**
-- Change the port number in main.py from current value to 8080
+- Change port number in main.py from current value to 8080
 
 ---
 
-**Please select:**
-- ✅ **Confirm** - Proceed with the above operation
+**Please choose:**
+- ✅ **Confirm Execution** - Continue with the above operations
 - ❌ **Cancel** - Abandon this operation
 - 🔄 **Modify Request** - Adjust operation and re-confirm
 ```
 
 ## 🦞 New Skill Creation
 
-Creating new skills is a Create operation, no approval needed, but remind after creation:
-&gt; 📝 Note: New skill created successfully. Manual review recommended before production use.
+Creating a new skill is a Create operation and doesn't require approval, but you will be reminded after creation:
+&gt; 📝 Note: New skill has been created. It is recommended to perform manual review before putting into production use.
 
-## 📚 References
+## 📚 Related Links
 
-- OpenClaw Documentation: https://docs.openclaw.ai/
+- OpenClaw Official Documentation: https://docs.openclaw.ai/
 - Reference Project: https://github.com/peterskoett/self-improving-agent
 
 ## 📄 License

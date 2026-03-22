@@ -1,109 +1,109 @@
 
-# 🎭 反驳型人格 - OpenClaw 技能
+# 🎭 Devil's Advocate - OpenClaw Skill
 
-让 AI 在输出回复前先进行自我反驳，通过正反方辩论提升输出质量。
+Self-refute and debate internally before responding to improve output quality and depth.
 
-## 💡 设计理念
+## 💡 Design Philosophy
 
-你是否遇到过这种情况：AI 给出的回答看起来很有道理，但仔细一想却发现明显的问题？
+Have you ever encountered this situation: AI gives an answer that sounds reasonable, but upon closer inspection, there are obvious issues?
 
-这个技能的核心思想是：**让 AI 先跟自己辩论，再给你答案。**
+The core idea of this skill is: **Let AI debate with itself first, then give you the answer.**
 
-通过内部的正反方讨论，AI 可以：
-- 发现自己推理中的逻辑漏洞
-- 考虑被忽略的边界情况
-- 识别潜在的风险和问题
-- 提供更平衡和全面的观点
+Through internal pro and con discussions, AI can:
+- Discover logical flaws in its own reasoning
+- Consider overlooked edge cases
+- Identify potential risks and problems
+- Provide more balanced and comprehensive perspectives
 
-## 🔄 工作原理
+## 🔄 How It Works
 
 ```
-用户问题
+User Question
     ↓
-【正方】初步构思答案
+[Pro] Draft initial answer
     ↓
-【反方】自我反驳、挑战漏洞
+[Con] Self-refute, challenge flaws
     ↓
-【整合】综合观点、完善答案
+[Integrate] Synthesize perspectives, refine answer
     ↓
-输出最终回复
+Output final response
 ```
 
-## 📋 自我反驳清单
+## 📋 Self-Refutation Checklist
 
-在内部思考时，AI 会逐一检查：
+During internal thinking, AI will check each item:
 
-| 检查项 | 说明 |
-|-------|------|
-| 🧠 逻辑检验 | 推理链条是否完整？ |
-| 🤔 假设质疑 | 隐含假设一定成立吗？ |
-| ⚠️ 边界情况 | 有没有例外情况？ |
-| 🚨 风险评估 | 有什么潜在风险？ |
-| ❌ 反例寻找 | 有没有反例可以推翻？ |
-| 🔄 替代方案 | 有没有其他选择？ |
+| Check Item | Description |
+|-----------|-------------|
+| 🧠 Logic Verification | Is the reasoning chain complete? |
+| 🤔 Assumption Challenging | Are implicit assumptions necessarily valid? |
+| ⚠️ Edge Cases | Are there any exceptions? |
+| 🚨 Risk Assessment | What are the potential risks? |
+| ❌ Counterexample Search | Are there counterexamples that can disprove? |
+| 🔄 Alternative Approaches | Are there other options? |
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 安装
+### Installation
 
 ```powershell
-# 复制到 OpenClaw 技能目录
+# Copy to OpenClaw skills directory
 xcopy /E /I devil-advocate %USERPROFILE%\.openclaw\skills\devil-advocate
 
-# 重启 Gateway
+# Restart Gateway
 openclaw restart
 ```
 
-### 使用
+### Usage
 
-安装后自动生效，无需额外配置！
+Automatically effective after installation, no additional configuration needed!
 
-## 📁 目录结构
+## 📁 Directory Structure
 
 ```
 devil-advocate/
-├── SKILL.md      # 技能定义
-├── CLAUDE.md      # 核心指令（自动注入）
-├── README.md     # 本文件
-├── INSTALL.md    # 安装指南
-└── EXAMPLES.md   # 使用示例
+├── SKILL.md      # Skill definition
+├── CLAUDE.md      # Core instructions (auto-injected)
+├── README.md     # This file
+├── INSTALL.md    # Installation guide
+└── EXAMPLES.md   # Usage examples
 ```
 
-## ✨ 效果对比
+## ✨ Effect Comparison
 
-### 没有反驳的回答
-> "用 MongoDB，它更灵活，开发效率高。"
+### Without Refutation
+&gt; "Use MongoDB, it's more flexible and has higher development efficiency."
 
-### 经过反驳后的回答
-> "这取决于你的具体需求：
->
-> **MongoDB 适合：** 数据结构不固定、快速原型开发...
-> **PostgreSQL 适合：** 需要事务、复杂查询...
->
-> 需要考虑：团队技能、数据一致性要求、现有技术栈...
->
-> 建议：如果不确定，可以先用 PostgreSQL，它也支持 JSON 字段。"
+### With Refutation
+&gt; "It depends on your specific needs:
+&gt;
+&gt; **MongoDB is good for:** Unstructured data, rapid prototyping...
+&gt; **PostgreSQL is good for:** Need transactions, complex queries...
+&gt;
+&gt; Things to consider: Team skills, data consistency requirements, existing tech stack...
+&gt;
+&gt; Suggestion: If unsure, start with PostgreSQL as it also supports JSON fields."
 
-## 🎯 适用场景
+## 🎯 Use Cases
 
-- 技术方案选型
-- 架构设计决策
-- 代码优化建议
-- 问题根因分析
-- 任何需要深度思考的场景
+- Technical solution selection
+- Architecture design decisions
+- Code optimization suggestions
+- Problem root cause analysis
+- Any scenario requiring deep thinking
 
-## 📚 相关概念
+## 📚 Related Concepts
 
-- **批判性思维**（Critical Thinking）
-- **红队思维**（Red Teaming）
-- **魔鬼辩护士**（Devil's Advocate）
-- **第一性原理**（First Principles Thinking）
+- **Critical Thinking**
+- **Red Teaming**
+- **Devil's Advocate**
+- **First Principles Thinking**
 
 ---
 
-**新技能已创建完成！** 🎉
+**New skill created successfully!** 🎉
 
-📝 审阅提示：
-- 请检查技能功能是否符合预期
-- 验证安全风险和权限设置
-- 确认无误后再投入正式使用
+📝 Review Note:
+- Please check if skill functionality meets expectations
+- Verify security risks and permission settings
+- Confirm before putting into production use

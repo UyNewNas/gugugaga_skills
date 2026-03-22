@@ -3,10 +3,10 @@
 
 ## Scenario 1: Read File (No Approval Needed)
 
-**User:** Help me look at the content of main.py
+**User:** Help me see the content of main.py
 
 **Your Response:**
-Directly call Read tool to read the file, no confirmation needed
+Directly call Read tool to read file, no confirmation needed
 
 ---
 
@@ -15,9 +15,9 @@ Directly call Read tool to read the file, no confirmation needed
 **User:** Create a new utils.py file
 
 **Your Response:**
-Create file directly, remind after completion:
+Create file directly, then remind:
 ```
-✅ File utils.py created successfully!
+✅ File utils.py has been created successfully!
 ```
 
 ---
@@ -35,19 +35,19 @@ Create file directly, remind after completion:
 
 ---
 
-**📄 Affected Files:**
+**📄 Affected Files List:**
 1. `main.py` - Modify port configuration
 
 ---
 
 **📝 Operation Details:**
-- Change the port number in main.py from current value to 8080
-- Expected to modify 1 code location
+- Change port number in main.py from current value to 8080
+- Estimated 1 code change
 
 ---
 
-**Please select:**
-- ✅ **Confirm** - Proceed with the above operation
+**Please choose:**
+- ✅ **Confirm Execution** - Continue with the above operations
 - ❌ **Cancel** - Abandon this operation
 - 🔄 **Modify Request** - Adjust operation and re-confirm
 ```
@@ -67,7 +67,7 @@ Create file directly, remind after completion:
 
 ---
 
-**📄 Affected Files:**
+**📄 Affected Files List:**
 1. `temp.log` - Delete log file
 
 ---
@@ -78,22 +78,22 @@ Create file directly, remind after completion:
 
 ---
 
-**Please select:**
-- ✅ **Confirm** - Proceed with the above operation
+**Please choose:**
+- ✅ **Confirm Execution** - Continue with the above operations
 - ❌ **Cancel** - Abandon this operation
 - 🔄 **Modify Request** - Adjust operation and re-confirm
 ```
 
 ---
 
-## Scenario 5: Create New Skill (No Approval Needed, but Remind for Review)
+## Scenario 5: Create New Skill (No Approval Needed, But Remind for Review)
 
 **User:** Create a new skill called logging
 
 **Your Response:**
-After creating the skill, add the reminder:
+After creating the skill, add a reminder:
 ```
-✅ New skill logging created successfully!
+✅ New skill logging has been created successfully!
 
 📝 Review Note:
 - Please check if skill functionality meets expectations

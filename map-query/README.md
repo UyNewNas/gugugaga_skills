@@ -1,40 +1,40 @@
 
-# 🗺️ 地图查询技能 - OpenClaw Skill
+# 🗺️ Map Query Skill - OpenClaw Skill
 
-通过具体地址定位，查询附近的美食、商店、促销活动等 POI 信息。支持高德地图、百度地图、腾讯地图。
+Query nearby restaurants, shops, promotions and other POI information by specific address. Supports AMap, Baidu Maps, Tencent Maps.
 
-## ✨ 核心功能
+## ✨ Core Features
 
-- **📍 地址定位** - 将详细地址转换为经纬度坐标
-- **🍽️ 美食查询** - 查找附近的餐厅、美食店
-- **🎉 促销活动** - 查询附近商家优惠活动
-- **🏪 POI 搜索** - 按类型搜索周边兴趣点
-- **🔀 多地图支持** - 高德/百度/腾讯地图 API
+- **📍 Address Geocoding** - Convert detailed address to latitude and longitude coordinates
+- **🍽️ Food Search** - Find nearby restaurants and food places
+- **🎉 Promotions Search** - Query nearby merchant promotions and deals
+- **🏪 POI Search** - Search nearby points of interest by type
+- **🔀 Multi-map Support** - AMap/Baidu/Tencent Maps APIs
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 1. 获取 API Key
+### 1. Get API Key
 
-至少需要配置一个地图服务商的 API Key：
+Need to configure at least one map provider API Key:
 
-- **高德地图**：https://lbs.amap.com/ （推荐）
-- **百度地图**：https://lbsyun.baidu.com/
-- **腾讯地图**：https://lbs.qq.com/
+- **AMap**: https://lbs.amap.com/ (Recommended)
+- **Baidu Maps**: https://lbsyun.baidu.com/
+- **Tencent Maps**: https://lbs.qq.com/
 
-### 2. 配置环境变量
+### 2. Configure Environment Variables
 
 ```bash
-# 高德地图（推荐）
+# AMap (Recommended)
 export AMAP_KEY=your_amap_api_key
 
-# 百度地图
+# Baidu Maps
 export BAIDU_MAP_KEY=your_baidu_map_key
 
-# 腾讯地图
+# Tencent Maps
 export TENCENT_MAP_KEY=your_tencent_map_key
 ```
 
-### 3. 安装技能
+### 3. Install the Skill
 
 ```powershell
 # Windows
@@ -44,82 +44,82 @@ xcopy /E /I map-query %USERPROFILE%\.openclaw\skills\map-query
 cp -r map-query ~/.openclaw/skills/map-query
 ```
 
-### 4. 重启 OpenClaw
+### 4. Restart OpenClaw
 
 ```bash
 openclaw restart
 ```
 
-## 💬 使用示例
+## 💬 Usage Examples
 
-### 查询附近美食
+### Search for Nearby Food
 
-**你问：** "帮我查查广州市番禺区上教xx街道47号附近有什么好吃的"
+**You ask:** "Help me find what's good to eat near No. 47, Shangjiao xx Street, Panyu District, Guangzhou"
 
-**AI 回答：**
+**AI responds:**
 ```
-📍 地址定位成功：广州市番禺区上教xx街道47号
+📍 Address geocoded successfully: No. 47, Shangjiao xx Street, Panyu District, Guangzhou
 
-🍽️ 附近美食推荐（1km内）：
+🍽️ Nearby food recommendations (within 1km):
 
-1. 粤香阁 - 粤菜 ⭐4.8分 (280米)
-   推荐：招牌烧鹅、白切鸡
+1. Yue Xiang Ge - Cantonese Cuisine ⭐4.8 (280m)
+   Recommended: Signature Roast Goose, White Cut Chicken
 
-2. 老上海馄饨铺 - 小吃 ⭐4.5分 (150米)
-   推荐：鲜肉大馄饨
+2. Old Shanghai Wonton Shop - Snacks ⭐4.5 (150m)
+   Recommended: Fresh Pork Wontons
 
 ...
 ```
 
-### 查询促销活动
+### Search for Promotions
 
-**你问：** "北京三里屯最近有什么促销活动？"
+**You ask:** "Are there any promotions near Sanlitun, Beijing recently?"
 
-**AI 回答：**
+**AI responds:**
 ```
-📍 地址定位成功：北京市朝阳区三里屯
+📍 Address geocoded successfully: Sanlitun, Chaoyang District, Beijing
 
-🎉 近期促销活动：
+🎉 Recent promotions:
 
-1. 太古里春季时尚周 (即日起-4月10日)
-   全场春装5折起，满1000减200
+1. Taikoo Li Spring Fashion Week (Now - April 10)
+   Spring clothing 50% off, spend 1000 get 200 off
 
-2. 星巴克新店开业 (即日起-3月31日)
-   饮品买一送一
+2. Starbucks New Store Opening (Now - March 31)
+   Buy one get one free on all drinks
 
 ...
 ```
 
-## 📁 目录结构
+## 📁 Directory Structure
 
 ```
 map-query/
-├── SKILL.md      # 技能定义
-├── CLAUDE.md      # 核心指令（自动注入）
-├── README.md     # 本文件
-├── INSTALL.md    # 详细安装指南
-├── EXAMPLES.md   # 使用示例
-└── scripts/      # （预留）查询脚本目录
+├── SKILL.md      # Skill definition
+├── CLAUDE.md      # Core instructions (auto-injected)
+├── README.md     # This file
+├── INSTALL.md    # Detailed installation guide
+├── EXAMPLES.md   # Usage examples
+└── scripts/      # (Reserved) Query scripts directory
 ```
 
-## 🛠️ 可用脚本
+## 🛠️ Available Scripts
 
-（后续实现）
+(To be implemented)
 
-- `scripts/geocode.mjs` - 地址解析
-- `scripts/search.mjs` - 周边搜索
-- `scripts/food.mjs` - 美食查询
-- `scripts/promotion.mjs` - 促销查询
+- `scripts/geocode.mjs` - Address geocoding
+- `scripts/search.mjs` - Nearby search
+- `scripts/food.mjs` - Food search
+- `scripts/promotion.mjs` - Promotion search
 
-## 🔗 参考项目
+## 🔗 Reference Project
 
-- 12306 技能：https://github.com/kirorab/12306-skill
+- 12306 Skill: https://github.com/kirorab/12306-skill
 
 ---
 
-**新技能已创建完成！** 🎉
+**New skill created successfully!** 🎉
 
-📝 审阅提示：
-- 请检查技能功能是否符合预期
-- API Key 配置需用户自行设置
-- 确认无误后再投入正式使用
+📝 Review Note:
+- Please check if skill functionality meets expectations
+- API Key configuration needs to be set by the user
+- Confirm before putting into production use

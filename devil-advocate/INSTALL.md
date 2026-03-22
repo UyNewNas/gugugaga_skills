@@ -1,9 +1,9 @@
 
-# 反驳型人格技能 - 安装指南
+# Devil's Advocate Skill - Installation Guide
 
-## 手动安装
+## Manual Installation
 
-### 1. 将技能复制到 OpenClaw 技能目录
+### 1. Copy the skill to OpenClaw skills directory
 
 ```powershell
 # Windows
@@ -13,36 +13,36 @@ xcopy /E /I devil-advocate %USERPROFILE%\.openclaw\skills\devil-advocate
 cp -r devil-advocate ~/.openclaw/skills/devil-advocate
 ```
 
-### 2. 重启 OpenClaw Gateway
+### 2. Restart OpenClaw Gateway
 
 ```bash
 openclaw restart
 ```
 
-### 3. 验证安装
+### 3. Verify Installation
 
-打开 Dashboard 检查技能是否已加载：
+Open Dashboard and check if the skill is loaded:
 http://127.0.0.1:18789/
 
 ---
 
-## 验证效果
+## Verify Effectiveness
 
-安装后，可以通过以下问题测试：
+After installation, you can test with the following questions:
 
-1. "我应该用什么数据库？"
-2. "这个代码需要优化吗？"
-3. "我们应该重构这个模块吗？"
+1. "What database should I use?"
+2. "Does this code need optimization?"
+3. "Should we refactor this module?"
 
-观察回答是否：
-- 考虑了多个角度
-- 提及了风险和局限性
-- 提供了替代方案
-- 没有过于绝对的表述
+Observe if the answer:
+- Considers multiple perspectives
+- Mentions risks and limitations
+- Provides alternative solutions
+- Avoids overly absolute statements
 
 ---
 
-## 卸载
+## Uninstall
 
 ```powershell
 # Windows

@@ -3,7 +3,7 @@
 
 ## Method 1: Manual Installation (Recommended)
 
-### 1. Copy the skill to OpenClaw skills directory
+### 1. Copy skill to OpenClaw skills directory
 
 ```bash
 # Windows
@@ -35,15 +35,15 @@ clawdhub install crud
 
 ---
 
-## Configuration
+## Configuration Notes
 
-This skill requires no additional configuration files and is automatically injected into sessions via `CLAUDE.md`.
+This skill doesn't require additional configuration files and will be automatically injected into sessions via `CLAUDE.md`.
 
 ### Optional: Custom Behavior
 
-If you need to adjust approval thresholds, you can tell the AI directly in the session:
-- "This file modification is simple, just execute it"
-- "Don't require confirmation for files in this directory next time"
+If you need to adjust approval thresholds, you can directly tell the AI during conversation:
+- "This file modification is simple, just do it directly"
+- "No need to confirm next time when modifying files in this directory"
 
 ---
 

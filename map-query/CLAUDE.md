@@ -1,153 +1,153 @@
 
-# 🗺️ 地图查询技能 - 使用指南
+# 🗺️ Map Query Skill - Usage Guide
 
-## 🎯 核心能力
+## 🎯 Core Capabilities
 
-你现在正在使用地图查询技能。你可以帮助用户：
+You are now using the Map Query skill. You can help users:
 
-1. **地址定位** - 将具体地址转换为地理位置
-2. **周边搜索** - 查找指定位置附近的 POI（兴趣点）
-3. **美食查询** - 专门查找附近的餐厅和美食
-4. **促销活动** - 查找附近商家的优惠活动
-
----
-
-## 📋 可用的地图服务商
-
-| 服务商 | 环境变量 | 状态 |
-|-------|---------|------|
-| 高德地图 | `AMAP_KEY` | 推荐使用 |
-| 百度地图 | `BAIDU_MAP_KEY` | 备选 |
-| 腾讯地图 | `TENCENT_MAP_KEY` | 备选 |
+1. **Address Geocoding** - Convert specific addresses to geographic locations
+2. **Nearby Search** - Find POIs (Points of Interest) near a specified location
+3. **Food Search** - Specifically find nearby restaurants and food places
+4. **Promotions Search** - Find nearby merchant promotions and deals
 
 ---
 
-## 🔧 使用流程
+## 📋 Available Map Providers
 
-### 1. 检查 API Key 配置
+| Provider | Environment Variable | Status |
+|---------|---------------------|--------|
+| AMap | `AMAP_KEY` | Recommended |
+| Baidu Maps | `BAIDU_MAP_KEY` | Alternative |
+| Tencent Maps | `TENCENT_MAP_KEY` | Alternative |
 
-在执行查询前，先检查环境变量中是否配置了地图 API Key：
+---
+
+## 🔧 Usage Workflow
+
+### 1. Check API Key Configuration
+
+Before executing a query, first check if map API keys are configured in environment variables:
 
 ```bash
-# 检查是否配置了 API Key
+# Check if API keys are configured
 echo $AMAP_KEY
 echo $BAIDU_MAP_KEY
 echo $TENCENT_MAP_KEY
 ```
 
-如果没有配置，提醒用户：
-&gt; ⚠️ 请先配置地图 API Key，至少需要配置一个地图服务商。
+If not configured, remind the user:
+&gt; ⚠️ Please configure a map API Key first. At least one map provider is required.
 
-### 2. 地址解析
+### 2. Address Geocoding
 
-当用户提供地址时，先进行地址解析获取经纬度：
+When the user provides an address, first perform address geocoding to get latitude and longitude:
 
-**示例地址格式：**
-- 详细地址：`广州市番禺区上教xx街道47号`
-- 城市+地标：`北京 天安门`
-- 地标名称：`上海东方明珠`
+**Example address formats:**
+- Detailed address: `No. 47, Shangjiao xx Street, Panyu District, Guangzhou`
+- City + Landmark: `Beijing Tiananmen`
+- Landmark name: `Shanghai Oriental Pearl Tower`
 
-### 3. 周边搜索参数
+### 3. Nearby Search Parameters
 
-根据用户需求，确定搜索参数：
+Based on user needs, determine search parameters:
 
-| 参数 | 说明 | 可选值 |
-|-----|------|-------|
-| `--type` | 搜索类型 | `food`(美食), `promotion`(促销), `hotel`(酒店), `bank`(银行) |
-| `--radius` | 搜索半径 | `1000`(1km), `2000`(2km), `5000`(5km) |
-| `--sort` | 排序方式 | `distance`(距离), `rating`(评分) |
-| `--limit` | 返回数量 | 1-50 |
+| Parameter | Description | Optional Values |
+|-----------|-------------|----------------|
+| `--type` | Search type | `food`(food), `promotion`(promotions), `hotel`(hotel), `bank`(bank) |
+| `--radius` | Search radius | `1000`(1km), `2000`(2km), `5000`(5km) |
+| `--sort` | Sort order | `distance`(distance), `rating`(rating) |
+| `--limit` | Number of results | 1-50 |
 
 ---
 
-## 💬 对话示例
+## 💬 Conversation Examples
 
-### 示例 1：查询附近美食
+### Example 1: Search for Nearby Food
 
-**用户：** "帮我查查广州市番禺区上教xx街道47号附近有什么好吃的"
+**User:** "Help me find what's good to eat near No. 47, Shangjiao xx Street, Panyu District, Guangzhou"
 
-**你的响应：**
-1. 检查 API Key 是否配置
-2. 解析地址获取经纬度
-3. 调用地图 API 查询附近美食
-4. 整理结果返回：
+**Your Response:**
+1. Check if API Key is configured
+2. Parse address to get coordinates
+3. Call map API to search for nearby food
+4. Organize results and return:
 
 ```
-📍 **地址定位成功**
-地址：广州市番禺区上教xx街道47号
-坐标：113.xxx, 23.xxx
+📍 **Address Geocoded Successfully**
+Address: No. 47, Shangjiao xx Street, Panyu District, Guangzhou
+Coordinates: 113.xxx, 23.xxx
 
-🍽️ **附近美食推荐（1km内）**
+🍽️ **Nearby Food Recommendations (within 1km)**
 
-1. **XX餐厅** - 粤菜
-   ⭐ 4.5分 | 📍 200米 | 💰 人均80元
-   📝 推荐：招牌烧鹅、白切鸡
+1. **XX Restaurant** - Cantonese Cuisine
+   ⭐ 4.5 | 📍 200m | 💰 ¥80 per person
+   📝 Recommended: Signature Roast Goose, White Cut Chicken
 
-2. **YY面馆** - 面食
-   ⭐ 4.2分 | 📍 350米 | 💰 人均30元
-   📝 推荐：云吞面、牛腩粉
+2. **YY Noodle Shop** - Noodles
+   ⭐ 4.2 | 📍 350m | 💰 ¥30 per person
+   📝 Recommended: Wonton Noodles, Beef Brisket Rice Noodles
 
-3. **ZZ火锅店** - 火锅
-   ⭐ 4.7分 | 📍 500米 | 💰 人均120元
-   📝 推荐：鸳鸯锅底、鲜牛肉
+3. **ZZ Hot Pot** - Hot Pot
+   ⭐ 4.7 | 📍 500m | 💰 ¥120 per person
+   📝 Recommended: Mandarin Duck Pot, Fresh Beef
 
 ---
-💡 提示：点击店名查看详情，需要导航请告诉我
+💡 Tip: Click store name to see details, need navigation? Let me know
 ```
 
-### 示例 2：查询促销活动
+### Example 2: Search for Promotions
 
-**用户：** "北京市朝阳区三里屯附近最近有什么促销活动吗？"
+**User:** "Are there any promotions near Sanlitun, Chaoyang District, Beijing recently?"
 
-**你的响应：**
-1. 检查 API Key
-2. 解析地址
-3. 查询促销活动
-4. 返回结果：
+**Your Response:**
+1. Check API Key
+2. Parse address
+3. Search for promotions
+4. Return results:
 
 ```
-📍 **地址定位成功**
-地址：北京市朝阳区三里屯
-坐标：116.45, 39.93
+📍 **Address Geocoded Successfully**
+Address: Sanlitun, Chaoyang District, Beijing
+Coordinates: 116.45, 39.93
 
-🎉 **近期促销活动**
+🎉 **Recent Promotions**
 
-1. **XX商场春季大促**
-   📍 300米 | 🕐 即日起-4月15日
-   📝 全场服饰5折起，满300减50
+1. **XX Mall Spring Sale**
+   📍 300m | 🕐 Now - April 15
+   📝 All clothing 50% off, spend 300 get 50 off
 
-2. **YY咖啡店新店开业**
-   📍 150米 | 🕐 即日起-3月31日
-   📝 所有饮品买一送一
+2. **YY Coffee Shop New Opening**
+   📍 150m | 🕐 Now - March 31
+   📝 Buy one get one free on all drinks
 
-3. **ZZ超市会员日**
-   📍 400米 | 🕐 每周三
-   📝 会员专享8.8折，积分双倍
+3. **ZZ Supermarket Member Day**
+   📍 400m | 🕐 Every Wednesday
+   📝 Members enjoy 12% off, double points
 
 ---
-💡 需要更多详情或导航请告诉我
+💡 Need more details or navigation? Let me know
 ```
 
 ---
 
-## ⚠️ 注意事项
+## ⚠️ Notes
 
-1. **API Key 必需** - 至少需要配置一个地图服务商的 API Key
-2. **地址尽量详细** - 越详细的地址定位越准确
-3. **结果有限制** - 单次查询返回的结果数量有限
-4. **数据时效性** - 促销活动等信息可能随时变化
-
----
-
-## 🔗 相关脚本
-
-技能提供以下脚本：
-
-- `scripts/geocode.mjs` - 地址解析
-- `scripts/search.mjs` - 周边搜索
-- `scripts/food.mjs` - 美食查询
-- `scripts/promotion.mjs` - 促销查询
+1. **API Key Required** - At least one map provider API Key is needed
+2. **Address Should Be Detailed** - More detailed address means more accurate geocoding
+3. **Results Limited** - Single query returns limited number of results
+4. **Data Timeliness** - Information such as promotions may change at any time
 
 ---
 
-**最后更新：** 2026-03-23
+## 🔗 Related Scripts
+
+The skill provides the following scripts:
+
+- `scripts/geocode.mjs` - Address geocoding
+- `scripts/search.mjs` - Nearby search
+- `scripts/food.mjs` - Food search
+- `scripts/promotion.mjs` - Promotion search
+
+---
+
+**Last Updated:** 2026-03-23
