@@ -1,6 +1,6 @@
 ---
 name: company-policy
-description: Company Policy Query - Query company attendance, behavior norms, information security and other policies at any time
+description: 公司制度查询 - 随时查询公司考勤、行为规范、信息安全等制度政策
 metadata:
   version: 1.0.0
   author: Slava Chan @UyNewNas
@@ -8,62 +8,59 @@ metadata:
   tags: [policy, attendance, hr, company-rules, knowledge-base]
 ---
 
-# Company Policy Query Skill
+# 公司制度查询技能
 
-Query company attendance, behavior norms, information security and other policies at any time. This skill contains the knowledge base of Tianyang Technology's on-site personnel at China Southern Power Grid.
+随时查询公司考勤、行为规范、信息安全等制度政策。本技能包含天阳科技驻南方电网人员的考勤和行为规范知识库。
 
-## Core Features
+## 核心功能
 
-- **Attendance Management** - Check-in, work hours, leave, overtime, business trip processes
-- **Behavior Norms** - Service behavior, dress code, office discipline
-- **Information Security** - Confidentiality, network security, elink usage norms
-- **Violation Cases** - Common violations and consequences
-- **Contact Information** - Project contacts and support
+- **考勤管理** - 打卡、工时、请假、加班、出差流程
+- **行为规范** - 服务行为、着装要求、办公纪律
+- **信息安全** - 保密制度、网络安全、elink使用规范
+- **违规案例** - 常见违规场景及后果
+- **联系方式** - 项目联系人及支持渠道
 
-## Trigger Conditions
+## 触发条件
 
-Automatically activates when user asks about:
-- Attendance and check-in related questions
-- Leave, overtime, business trip processes
-- Work hours reporting
-- Company rules and behavior norms
-- Information security requirements
-- Violation consequences
+当用户询问以下问题时自动激活：
+- 考勤打卡相关问题
+- 请假、加班、出差流程
+- 工时填报
+- 公司规章制度和行为规范
+- 信息安全要求
+- 违规后果
 
-## Knowledge Base Structure
+## 知识库结构
 
-The skill includes the following policy categories:
+### 01. 考勤制度
+- 多系统并行使用（elink、钉钉、天阳APP、刷脸门禁）
+- 打卡要求和时间/地点规范
+- 工时填报指南
+- 补卡流程
+- 请假流程
+- 加班规范
+- 出差流程
+- 薪资结算
 
-### 01. Attendance System
-- Multi-system parallel usage (elink, DingTalk, Tianyang APP, Face Recognition)
-- Check-in requirements and time/location norms
-- Work hours reporting guidelines
-- Abnormal work hours handling
-- Supplementary check-in process
-- Leave process
-- Overtime norms
-- Business trip process
-- Salary settlement
+### 02. 行为规范与信息安全
+- 保密制度
+- 网络安全规定
+- elink操作规范
+- 服务行为标准
 
-### 02. Behavior Norms & Information Security
-- Confidentiality system
-- Network security regulations
-- elink operation norms
-- Service behavior standards
+### 03. 常见问题与违规案例
+- 高频违规Top5场景
+- 违规成本计算器
 
-### 03. Common Issues & Violation Cases
-- Top 5 violation scenarios
-- Violation cost calculator
-
-### 04. Project Contacts
-- Key contact persons
-- Support channels
+### 04. 项目联系人
+- 关键联系人
+- 支持渠道
 
 ---
 
-**New skill created successfully!** 🎉
+**新技能已创建成功！** 🎉
 
-📝 Note:
-- This skill contains internal company policy knowledge
-- Please ensure compliance when using
-- Update knowledge base when policies change
+📝 注意：
+- 本技能包含公司内部制度知识
+- 使用时请确保合规
+- 制度变更时请更新知识库
